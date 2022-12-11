@@ -4,6 +4,7 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
 
 
 @font-face {
@@ -59,6 +60,7 @@ body {
     @include text(18px);
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+
 }
 
 .title--big {
@@ -84,8 +86,11 @@ button {
     border-radius: 4px;
     margin-top: 2vw;
     margin-bottom: 8px;
-    cursor: pointer;
+    cursor: pointer; 
+    
 }
+
+
 
 .image-text-section {
     padding: 5.6vw;
