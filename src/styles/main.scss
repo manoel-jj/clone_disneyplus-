@@ -5,7 +5,7 @@
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
-
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -24,13 +24,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 
 
 body {
     background-color: variaveis.$corDeFundo;
-   
+
 }
 
 @mixin text($fontSize: 16px) {
@@ -75,19 +76,49 @@ body {
     @include title(28px);
 }
 
-button {
-    display: block;
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corDeBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
-    cursor: pointer; 
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeBotaoPrimario;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeBotaoPrimario, 3%);
+    }
+
+
+    &--secondary {
+        background-color: variaveis.$corDeBotaoSecundario;
+        border-color: variaveis.$corDeBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDeBotaoSecundario, 3%);
+        }
     
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDeBotaoDark, 0.8); 
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+
+    }
+
 }
 
 
