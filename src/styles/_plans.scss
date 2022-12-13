@@ -33,6 +33,11 @@ h2 {
 
         img {
             height: 83px;
+            max-width: 100%;
+
+            @media (max-width: 768px) {
+                
+            }
         }
 
 
